@@ -1,0 +1,39 @@
+############ application ############
+server:
+  servlet:
+    context-path: /shopping
+  port: 8081
+
+#logging:
+  #  path: log/
+  #  file: irs-api.log
+  #  level.root: INFO
+  #  level.org.springframework.core: DEBUG
+#  config: classpath:logback-spring.xml
+
+spring:
+  application:
+    name: shopping
+  datasource:
+    username: postgres
+    password: postgres
+    url: jdbc:postgresql://10.87.11.36:5432/shopping-mall
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+#    hibernate:
+#      ddl-auto: create
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  redis:
+    cluster:
+      maxTotal: 100
+      nodes: 192.168.64.3:7031,192.168.64.3:7032,192.168.64.3:7033,192.168.64.3:7034,192.168.64.3:7035,192.168.64.3:7036
+      maxIdle: 20
+      minIdle: 2
+      maxWait: 10000
+      testOnBorrow: true
+      testOnReturn: false
+      timeout: 5000
+      connectionTimeout: 5000
+      maxAttempts: 3
+    password: 123456
