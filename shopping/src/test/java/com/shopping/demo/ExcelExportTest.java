@@ -30,12 +30,12 @@ public class ExcelExportTest {
         try {
             String fileName="测试.xlsx";
 //            util.exportExcel("各局自营餐情况报表", columnNames, productDTOS, new FileOutputStream("/home/catering/orderschedule/excelFile/"+fileName), ExportExcelUtils.EXCEl_FILE_2007);
-            util.exportExcel("统计商品Test", columnNames, productDTOS, new FileOutputStream("D:/aaaa/"+fileName), ExportExcelUtils.EXCEl_FILE_2007);
+            util.exportExcel("统计商品Test", columnNames, productDTOS, new FileOutputStream("D:/"+fileName), ExportExcelUtils.EXCEl_FILE_2007);
             System.out.println("导出excel成功");
             System.out.println("导出excel");
-            String filePath = "D:/aaaa/测试.xlsx";
+            String filePath = "D:/测试.xlsx";
             System.out.println(filePath);
-            readTxt(filePath);
+//            readTxt(filePath);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
