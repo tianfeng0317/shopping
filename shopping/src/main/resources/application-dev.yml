@@ -4,6 +4,9 @@ server:
     context-path: /shopping
 
 spring:
+  thymeleaf:
+    suffix: .html
+    prefix: classpath:/templates/
   application:
     name: shopping
   datasource:
